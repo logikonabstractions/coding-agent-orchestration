@@ -113,6 +113,16 @@ def _sync_prompt_catalog_to_skills(
     return updated
 
 
+def _sync_checkpoint_templates(skills_root: Path, *, force: bool) -> list[str]:
+    """Ensure checkpoint templates are available to vibe-loop scripts in target repos."""
+    repo_root = _repo_root_from_this_file()
+    src_dir = repo_root / "templates" / "checkpoints"
+    if not src_dir.exists():
+        return []
+    dst_dir = skills_root / "vibe-loop" / "resources" / "checkpoint_templates"
+    return _sync_dir(src_dir, dst_dir, force=force)
+
+
 def _copy_if_missing(src: Path, dst: Path, *, force: bool = False) -> str:
     """
     Returns one of: "created", "overwritten", "skipped".
@@ -246,6 +256,7 @@ def init_repo(target_repo: Path, skillset: str | None = None, overwrite: bool = 
     created.extend(
         _sync_prompt_catalog_to_skills(catalog_path, dst_root, installed_skill_names, force=False)
     )
+    created.extend(_sync_checkpoint_templates(dst_root, force=False))
 
     # Summary
     print("init-repo summary")
@@ -415,6 +426,7 @@ def install_skills_agent_global(agent: str, force: bool) -> int:
     updated.extend(
         _sync_prompt_catalog_to_skills(canonical_catalog, dst_root, skill_names, force=True)
     )
+    updated.extend(_sync_checkpoint_templates(dst_root, force=True))
 
     # 5) Ensure key helper scripts are present inside skills (force refresh)
     helper_pairs = [
@@ -475,6 +487,7 @@ def install_skills_agent_repo(agent: str, target_repo: Path, force: bool) -> int
     updated.extend(
         _sync_prompt_catalog_to_skills(canonical_catalog, dst_root, skill_names, force=True)
     )
+    updated.extend(_sync_checkpoint_templates(dst_root, force=True))
 
     print(f"install-skills summary ({agent} repo-local)")
     print(f"- Repo: {target_repo}")

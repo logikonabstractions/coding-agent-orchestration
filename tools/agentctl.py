@@ -3868,6 +3868,21 @@ def _extract_add_checkpoint_params(raw_args: list[str]) -> list[str]:
     return params
 
 
+def _resolve_checkpoint_template_path(repo_root: Path, template_name: str) -> Path | None:
+    """Resolve a checkpoint template across repo and skill locations."""
+    script_root = Path(__file__).resolve().parents[1]
+    candidates = [
+        repo_root / "templates" / "checkpoints" / f"{template_name}.yaml",
+        Path("templates") / "checkpoints" / f"{template_name}.yaml",
+        script_root / "templates" / "checkpoints" / f"{template_name}.yaml",
+        script_root / "resources" / "checkpoint_templates" / f"{template_name}.yaml",
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    return None
+
+
 def cmd_add_checkpoint(args: argparse.Namespace) -> int:
     repo_root = Path(args.repo_root)
     state = load_state(repo_root)
@@ -3875,9 +3890,12 @@ def cmd_add_checkpoint(args: argparse.Namespace) -> int:
         print("STATE.md is missing a Stage; cannot add checkpoint.")
         return 2
 
-    template_path = Path("templates") / "checkpoints" / f"{args.template}.yaml"
-    if not template_path.exists():
-        print(f"Template not found: {template_path}")
+    template_path = _resolve_checkpoint_template_path(repo_root, args.template)
+    if template_path is None:
+        print(
+            "Template not found: "
+            f"{args.template}.yaml (searched repo templates/ and skill resources paths)"
+        )
         return 2
 
     try:
