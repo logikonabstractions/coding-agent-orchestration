@@ -30,9 +30,7 @@ If you want to run a small demo in your own repo, treat this as the minimum path
 - Keep this orchestration repo as a toolkit/reference repo (any location on disk is fine).
 - Your app/project repo stays separate; you do **not** copy or clone this whole repo into it.
 - Run bootstrap from this toolkit repo and point it at your app repo path.
-- After bootstrap, run day-to-day workflow commands in one of two ways:
-  - from this toolkit repo by pointing `--repo-root` at your app repo, or
-  - from your app repo via the installed skill script at `.codex/skills/vibe-loop/scripts/agentctl.py`.
+- After bootstrap, do day-to-day workflow commands from inside your app repo using the copied tools in that repo.
 
 Example:
 
@@ -40,12 +38,9 @@ Example:
 # from this orchestration repo
 python3 tools/bootstrap.py init-repo /path/to/my-app
 
-# option A: stay in this orchestration repo
-python3 tools/agentctl.py --repo-root /path/to/my-app --format json next
-
-# option B: run inside your app repo (uses installed skill script)
+# then work inside your app repo
 cd /path/to/my-app
-python3 .codex/skills/vibe-loop/scripts/agentctl.py --repo-root . --format json next
+python3 tools/agentctl.py --repo-root . --format json next
 ```
 
 ### 1) Initialize orchestration files once
@@ -76,13 +71,6 @@ For a demo, keep 1 stage and 1–2 checkpoints. In each checkpoint, write:
 
 Tip: use `agentctl add-checkpoint --template ...` if you want a prebuilt structure.
 
-After `init-repo`, template files are available to the app-repo script under
-`.codex/skills/vibe-loop/resources/checkpoint_templates/`, so this works directly in your app repo:
-
-```bash
-python3 .codex/skills/vibe-loop/scripts/agentctl.py --repo-root . add-checkpoint --template add-feature --name "demo flow"
-```
-
 ### 3) Set the active checkpoint in `.vibe/STATE.md`
 
 In `.vibe/STATE.md`, set:
@@ -93,13 +81,11 @@ In `.vibe/STATE.md`, set:
 
 ### 4) Run the loop dispatcher
 
-From your project root, use the installed skill script:
+From your project root:
 
 ```bash
-python3 .codex/skills/vibe-loop/scripts/agentctl.py --repo-root . --format json next
+python3 tools/agentctl.py --repo-root . --format json next
 ```
-
-(Alternative: run from this orchestration repo with `python3 tools/agentctl.py --repo-root /path/to/your/repo --format json next`.)
 
 Use the returned role/prompt, do that one loop, then update `.vibe/STATE.md` with results.
 
@@ -108,7 +94,7 @@ Use the returned role/prompt, do that one loop, then update `.vibe/STATE.md` wit
 After each loop, write the `LOOP_RESULT` line back through `agentctl`:
 
 ```bash
-python3 .codex/skills/vibe-loop/scripts/agentctl.py --repo-root . --format json loop-result --line 'LOOP_RESULT: {...}'
+python3 tools/agentctl.py --repo-root . --format json loop-result --line 'LOOP_RESULT: {...}'
 ```
 
 This keeps future recommendations deterministic.
