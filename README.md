@@ -22,6 +22,95 @@ Everything runs off four files in `.vibe/`:
 
 Agents do **not** invent workflows. They run the prompt loop recommended by `agentctl.py`.
 
+## Getting Started (minimum-effort path for a brand-new project)
+
+If you are starting from zero, this is the shortest practical flow:
+
+1) **Bootstrap your project repo once** (from this orchestration repo):
+
+```bash
+python3 tools/bootstrap.py init-repo /path/to/my-new-project
+```
+
+2) **Move into your project repo** and verify orchestration files exist:
+
+```bash
+cd /path/to/my-new-project
+python3 tools/agentctl.py --repo-root . status
+```
+
+3) **Set Stage in `.vibe/STATE.md`** (if it is blank) so checkpoint insertion knows where to write.
+
+4) **Create your first checkpoint in `.vibe/PLAN.md`** (yes, you do need a plan entry first):
+
+```bash
+python3 tools/agentctl.py --repo-root . add-checkpoint --template add-feature --name "initial feature" --module_path src
+```
+
+5) **Set the active checkpoint in `.vibe/STATE.md`** to match what you just added (e.g., stage `1`, checkpoint `1.1`, status `NOT_STARTED`).
+
+6) **Run the dispatcher to get the first loop**:
+
+```bash
+python3 tools/agentctl.py --repo-root . --format json next
+```
+
+7) **Execute the recommended loop**, then record the emitted `LOOP_RESULT`:
+
+```bash
+python3 tools/agentctl.py --repo-root . --format json loop-result --line 'LOOP_RESULT: {...}'
+```
+
+8) Repeat `next -> run loop -> loop-result` until `recommended_role` is `stop`.
+
+### Do I have to write the plan manually?
+
+- **Yes, you need a checkpoint in `.vibe/PLAN.md` before useful execution starts.**
+- You can write PLAN.md manually, or use commands to generate/insert it:
+  - Full draft from a problem statement: `python3 tools/agentctl.py --repo-root . plan --problem-statement "..." --overwrite`
+  - Add one checkpoint from a template: `python3 tools/agentctl.py --repo-root . add-checkpoint --template add-feature --name "..."`
+- For new feature work, `add-feature` is usually the best first template.
+
+### Manual PLAN.md format (recommended)
+
+If you write the plan yourself, keep this structure so `agentctl validate` and loop tooling work reliably:
+
+```md
+# PLAN
+
+## Stage 1 — Stage title
+
+**Stage objective:**
+One sentence for the stage goal.
+
+---
+
+### 1.1 — Checkpoint title
+
+* **Objective:**
+  One sentence objective.
+* **Deliverables:**
+  * Concrete output 1
+  * Concrete output 2
+* **Acceptance:**
+  * Verifiable condition 1
+  * Verifiable condition 2
+* **Demo commands:**
+  * `python3 -m pytest ...`
+* **Evidence:**
+  * What output/log/proof to paste in STATE.md
+
+---
+```
+
+Use one of these built-in templates when you do not want to write sections from scratch:
+
+- `add-feature`: New feature implementation + tests.
+- `fix-bug`: Bug fix + regression test.
+- `refactor-module`: Internal cleanup without behavior change.
+- `add-endpoint`: New API route + contract/routing updates.
+- `add-test-coverage`: Focused coverage increase for an existing module.
+
 ## Quick start for a simple project (what to edit + where to write)
 
 If you want to run a small demo in your own repo, treat this as the minimum path:
@@ -146,6 +235,55 @@ workflow state, remove the ignore entry locally.
 
 ## Core tooling
 
+## CLI cheat sheet (commands + options)
+
+### `tools/agentctl.py`
+
+```bash
+python3 tools/agentctl.py [--repo-root PATH] [--format text|json] <command> [options]
+
+Commands:
+  validate         [--strict] [--strict-complexity]
+  status           [--with-context]
+  next             [--run-gates] [--workflow NAME] [--parallel N]
+  loop-result      (--line TEXT | --json-payload JSON | --stdin)
+  workflow-approve --workflow continuous-documentation|continuous-refactor|continuous-test-generation --ids "1,3"
+  add-checkpoint   --template NAME key=value ...
+  plan             [--problem-statement TEXT] [--provider NAME] [--dry-run] [--output PATH] [--overwrite] [--resume RUN_ID]
+  feedback         validate | inject [--dry-run] | ack
+  dag              [--format json|ascii]
+```
+
+### `tools/bootstrap.py`
+
+```bash
+python3 tools/bootstrap.py init-repo PATH [--skillset NAME] [--overwrite]
+python3 tools/bootstrap.py install-skills [--global|--repo] --agent all|codex|claude|gemini|copilot [--force]
+```
+
+### `tools/checkpoint_templates.py`
+
+```bash
+python3 tools/checkpoint_templates.py list
+python3 tools/checkpoint_templates.py preview TEMPLATE key=value ...
+python3 tools/checkpoint_templates.py instantiate TEMPLATE key=value ...
+```
+
+### `tools/prompt_catalog.py`
+
+```bash
+python3 tools/prompt_catalog.py PATH_TO_TEMPLATE_PROMPTS_MD list
+python3 tools/prompt_catalog.py PATH_TO_TEMPLATE_PROMPTS_MD get NAME_OR_TITLE
+```
+
+### Command intent (what to expect)
+
+- `next`: Returns the single best next loop (or `recommended_roles` when `--parallel` is used) based on current STATE/PLAN/workflow conditions.
+- `workflow-approve`: Records which minor ideas are approved so a continuous workflow can continue past an approval-gated stop.
+- `plan`: Generates (or resumes generation of) a PLAN.md from a high-level problem statement using the configured provider pipeline.
+- `feedback`: Handles FEEDBACK.md lifecycle (`validate`, `inject`, `ack`) so feedback can be checked, converted into STATE issues, then archived.
+- `dag`: Renders checkpoint dependencies and statuses so you can quickly see what is DONE, READY, or dependency-blocked.
+
 ### `tools/agentctl.py`
 
 The control plane for the workflow. Key commands:
@@ -232,6 +370,14 @@ Stage 11 added checkpoint templates to reduce planning boilerplate:
 
 Templates cover common patterns (feature, bug, refactor, endpoint, coverage) and
 include sensible default acceptance criteria.
+
+### Available checkpoint templates
+
+- `add-feature`: Use when you need a standard feature-delivery checkpoint with implementation + edge-case tests.
+- `fix-bug`: Use when you need to resolve a defect and explicitly include a regression test.
+- `refactor-module`: Use when you need to improve module structure/maintainability without changing behavior.
+- `add-endpoint`: Use when you need to add an HTTP route plus wiring and API contract/OpenAPI updates.
+- `add-test-coverage`: Use when you need a focused checkpoint for increasing coverage in a specific module or behavior area.
 
 ## Bootstrapping and skills
 
