@@ -1,6 +1,9 @@
-# Embedded Guides (Split)
+# Embedded Guides
 
-Per-source embedded guide mapping for refactor remediation.
+Embedded guides are optional snippets you can copy into project docs.
 
-- `.codex/skills/vibe-loop/scripts/vibe_mark_done.py`
-- `.codex/skills/vibe-prompts/scripts/vibe_get_prompt.py`
+For this simplified setup, prefer linking directly to:
+- `README.md`
+- `AGENTS.md`
+- `.vibe/PLAN.md` template
+- `.vibe/STATE.md` template
