@@ -15,7 +15,7 @@ Minimal markdown workflow.
 - Track current work in `.vibe/STATE.md`.
 - Implement one checkpoint.
 - Record evidence.
-- Commit.
+- Open a PR
 - Human review.
 
 ## Status values

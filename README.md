@@ -1,12 +1,6 @@
-# Vibe Coding-Agent Orchestration (Markdown-only)
+# Vibe Coding-Agent Orchestration (version Basic: Markdown-only)
 
-This repository now uses a **minimal markdown workflow**.
-
-## What changed
-
-- Python orchestration code was removed.
-- Workflow control is done manually in markdown files.
-- Human review is expected at each checkpoint.
+This repository tracks agentic work using files only (no orchestration or tooling).
 
 ## Core files
 
@@ -16,16 +10,15 @@ This repository now uses a **minimal markdown workflow**.
 - `.vibe/HISTORY.md` — optional archive/summaries
 - `.vibe/CONTEXT.md` — optional context handoff notes
 
-## Recommended loop
+## Workflow loop
 
 1. Read `AGENTS.md`, `.vibe/STATE.md`, `.vibe/PLAN.md`.
 2. Pick the active checkpoint from `.vibe/STATE.md`.
 3. Implement only that checkpoint.
-4. Run listed demo/test commands.
+4. Run any required demo/test commands.
 5. Update `.vibe/STATE.md` with work log + evidence.
-6. Commit.
+6. Open a PR
 7. Human reviews.
-8. Move to next checkpoint.
 
 ## Checkpoint template (PLAN.md)
 

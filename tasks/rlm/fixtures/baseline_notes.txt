@@ -1,2 +1,0 @@
-Baseline checkpoint fixture text.
-This file is used to verify multi-iteration runtime behavior.

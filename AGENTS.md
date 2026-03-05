@@ -22,23 +22,23 @@ No Python orchestrator is required.
 
 ## Scope and cadence
 
-- Do one checkpoint at a time (or at most 2 if explicitly requested).
+- Do one checkpoint at a time (unless explicitly requested more).
 - Keep diffs small and reviewable.
+- Limite interventions and changes to what is necessary to meet acceptance
 - Human reviews after each checkpoint.
-- Treat `.vibe/*.md` as source of truth.
 
 ## Checkpoint format (PLAN.md)
 
-Each checkpoint must include:
+For each checkpoint we should have:
 - Objective
 - Deliverables
 - Acceptance
-- Demo commands
+- Demo commands (if any)
 - Evidence
 
 ## State format (STATE.md)
 
-Track:
+This tracks:
 - Current stage/checkpoint/status
 - Work log (append-only)
 - Active issues
@@ -60,8 +60,3 @@ Stop and record an issue in `.vibe/STATE.md` when:
 - Commit coherent changes.
 - Commit message prefix: `<checkpoint-id>: <imperative summary>`
 
-## Non-goals
-
-- No autonomous long-running orchestration.
-- No mandatory tooling runtime.
-- No hidden state outside markdown and git history.
