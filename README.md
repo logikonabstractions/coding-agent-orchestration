@@ -1,6 +1,6 @@
 # Vibe Coding-Agent Orchestration (version Basic: Markdown-only)
 
-This repository tracks agentic work using files only (no orchestration or tooling).
+This repository tracks agentic work using files states only
 
 ## Core files
 

@@ -12,6 +12,7 @@ No Python orchestrator is required.
 3. `.vibe/STATE.md`
 4. `.vibe/PLAN.md`
 5. `.vibe/HISTORY.md`
+6. `.vibe/CONTEXT.md`
 
 ## Required read order
 
@@ -19,6 +20,7 @@ No Python orchestrator is required.
 2. `.vibe/STATE.md`
 3. `.vibe/PLAN.md`
 4. `.vibe/HISTORY.md` (optional)
+5. `.vibe/CONTEXT.md` (optional)
 
 ## Scope and cadence
 
