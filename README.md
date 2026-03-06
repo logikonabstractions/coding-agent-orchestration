@@ -2,9 +2,9 @@
 
 This document is human-oriented and not to be considered for agent workflows.
 
-## TODO
+## TODO & CURRENT STATE
 * update this readme to explain new workflows
-* review .vibe (PLAN STATE etc.) & meta-templates so ensure we're uptodate everywhere	
+* working on .components: review works by claude, chatgpt. see the "state_of_work.md" file in .component
 
 This repository tracks agentic work using state files only.
 
