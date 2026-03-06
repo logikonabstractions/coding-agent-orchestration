@@ -1,71 +1,29 @@
-# AGENTS.md — Markdown-only workflow contract
+# AGENTS.md — Overriding workflow contract
 
 ## Purpose
 
-Use this repository as a **lightweight, human-in-the-loop planning system**.
-No Python orchestrator is required.
+Use this repository as a **lightweight, human-in-the-loop planning system**. It supports 3 modes: **architectural design**, **component designs** and **vibe** (implementation). Each layer is independant of the others and instructions should be followed in complete isolation depenging your assigment type (architecture, component or implementation).
 
-## Precedence
+This file is the overriding, baseline worflow contract. It is complemented by mode-specific `AGENT_<mode>.md` instructions.
 
-1. User instructions in chat
-2. This file
-3. `.vibe/STATE.md`
-4. `.vibe/PLAN.md`
-5. `.vibe/HISTORY.md`
-6. `.vibe/CONTEXT.md`
+## Generic instructions
+	- The mode (architecture, component or vibe) must be clearly specified. Either earlier in the conversation (e.g. it is clear from conversation history which mode is expected) or explicitely in the prompt. If you are unsure, you MUST ask to confirm.
 
-## Required read order
+## Instruction precedence & read order
 
-1. `AGENTS.md`
-2. `.vibe/STATE.md`
-3. `.vibe/PLAN.md`
-4. `.vibe/HISTORY.md` (optional)
-5. `.vibe/CONTEXT.md` (optional)
+	1. User instructions in chat
+	2. This file
+	3. The mode-specific workflow contract for your task: `AGENTS_<mode>.md`
 
-## Scope and cadence
-
-- Do one checkpoint at a time (unless explicitly requested more).
-- Keep diffs small and reviewable.
-- Limit interventions and changes to what is necessary to meet acceptance criteria
-- Human reviews after each checkpoint.
-
-## Metafile updates (PLAN.md, STATE.md, HISTORY.md)
-- If a checkpoint is changed to DONE, you must update the metafile accordingly (by the agent or a human)
-- NEVER remove checkpoints from PLAN.md, unless explicitely asked to
-- NEVER re-number the checkpoints (unless explicitely asked to)
--
-
-
-## Checkpoint format (PLAN.md)
-
-For each checkpoint we should have:
-- Objective
-- Deliverables
-- Acceptance
-- Demo commands (if any)
-- Evidence
-
-## State format (STATE.md)
-
-This tracks:
-- Current stage/checkpoint/status
-- Work log (append-only)
-- Active issues
-- Decisions
 
 ## Stop conditions
 
-Stop and record an issue in `.vibe/STATE.md` when:
-- Required info is missing
-- Instructions conflict
-- Scope/architecture decision is needed
-- External credentials/secrets are required
-- Tests fail for unclear reasons
+Record an issue in `.vibe/STATE.md` and pause when:
 
-## Version control policy
+- required information is missing,
+- instructions conflict,
+- a scope/architecture decision is needed,
+- external credentials/secrets are required,
+- you encounter an error that you cannot **confidently** explain
 
-- Work on current branch only.
-- Do not create/switch/delete branches unless user asks.
-- Commit coherent changes.
-- Commit message prefix: `<checkpoint-id>: <imperative summary>`
-
+In any such cases, stop work, provide information and ask for clarifications.
