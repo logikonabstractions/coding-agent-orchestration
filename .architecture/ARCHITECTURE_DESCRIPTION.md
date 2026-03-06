@@ -59,6 +59,8 @@ Repeat & fill this template as needed. Follow the numbering convention.
   - <Components IDs>
 - Constraints / notes:
   - <important remarks>
+- Principal alternative (optional)
+  - 1-2 sentence, do not systematically  include with all components. But when a there are strong reasons to consider 2 options as very close, describe here your 2nd best choice for this component.
 
 ## System interaction summary
 

@@ -1,16 +1,34 @@
-# Vibe Coding-Agent Orchestration (Basic Markdown-only version)
+# Vibe Coding-Agent Orchestration
+
+This document is human-oriented and not to be considered for agent workflows.
+
+## TODO
+* update this readme to explain new workflows
+* review .vibe (PLAN STATE etc.) & meta-templates so ensure we're uptodate everywhere	
 
 This repository tracks agentic work using state files only.
 
-## Core files for agentic workflow
+## Modes
 
-All files in `.vibe` track the progress of work. 
+- `.architecture/` — architectural design
+- `.vibe/` — implementation / feature execution
+- `.component/` — reserved for component design
 
-- `AGENTS.md` — execution contract and operating policy.
-- `.vibe/PLAN.md` — checkpoint backlog with acceptance criteria.
-- `.vibe/STATE.md` — active checkpoint, status, and current session evidence.
-- `.vibe/HISTORY.md` — optional archive for completed checkpoints and resolved issues.
-- `.vibe/CONTEXT.md` — optional handoff notes and durable project context.
+## Architecture workflow files
+
+- `.architecture/AGENTS_ARCHITECTURE.md` — architecture execution contract and read order
+- `.architecture/ARCHITECTURE_DESCRIPTION.md` — required architecture response format
+- `.architecture/PLAN.md` — architecture questions, investigations, and decision backlog
+- `.architecture/STATE.md` — current architecture draft, active focus, blockers, and work log
+- `.architecture/HISTORY.md` — resolved questions, review history, and durable decisions
+
+## Vibe workflow files
+
+- `.vibe/AGENTS_VIBE.md` — implementation workflow contract
+- `.vibe/PLAN.md` — implementation checkpoint backlog
+- `.vibe/STATE.md` — active checkpoint and current session state
+- `.vibe/HISTORY.md` — completed checkpoints and resolved issues
+- `.vibe/CONTEXT.md` — optional handoff notes and durable context
 
 ## Canonical templates (DRY)
 

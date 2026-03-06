@@ -7,7 +7,10 @@ Implements specific features based on the stage/checkpoints (described in `PLAN.
 ## Instruction precedence & read order
     1. As specified by `AGENTS.md`
     2. This file
-    3. `.architecture/ARCHITECTURE_DESCRIPTION.md`
+		3. `.vibe/STATE.md`
+		4. `.vibe/PLAN.md`
+		5. `.vibe/HISTORY.md`
+		6. `.vibe/CONTEXT.md`
 
 ## Scope and cadence
 

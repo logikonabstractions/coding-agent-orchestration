@@ -7,7 +7,10 @@ Translate a product or problem statement into an **architectural design**. This 
 ## Instruction precedence & read order
 1. As specified by `AGENTS.md`
 2. This file
-3. `.architecture/ARCHITECTURE_OUTPUT_FORMAT.md`
+3. `.architecture/ARCHITECTURE_DESCRIPTION.md`
+4. `.architecture/STATE.md`
+5. `.architecture/PLAN.md`
+6. `.architecture/HISTORY.md`
 
 ## Scope
 
@@ -33,36 +36,12 @@ The output must:
 
 Describe components by **role**, not by implementation choice.
 
-Use terms such as:
-
-- web client
-- mobile client
-- API layer
-- application service
-- authentication provider
-- relational database
-- object storage
-- message queue
-- background job processor
-- notification service
-
 Do **not** use concrete product names.
 
 ## Component rule
 
 Architectural components must represent **meaningful system capabilities**.
 They must be large enough to matter at system-design level and small enough to have a clear responsibility.
-
-Prefer examples such as:
-
-- client application
-- identity and access control
-- catalog management
-- order processing
-- payment processing
-- search and discovery
-- notification delivery
-- observability and operations
 
 Do not model low-level implementation artifacts as architectural components.
 
@@ -74,3 +53,11 @@ Use top-level component numbering in increments of 10:
 - 20
 - 30
 - 40
+
+## Architecture planning rule
+
+Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for  blocking architectural choices.
+
+Use `.architecture/STATE.md` to track the currently active architecture draft, current focus, active blockers, and work log.
+
+Use `.architecture/HISTORY.md` to archive resolved questions, completed review rounds, and durable architecture decisions.
