@@ -36,4 +36,5 @@ In any such cases, stop work, provide information and ask for clarifications.
 For all modes, `.<mode>/HISTORY.md` tracks advancement of the task. Add a relevant entry in this file when:
 	- A STATUS moves to `DONE`. 
 
+## Project structure
 

@@ -2,9 +2,10 @@
 
 This document is human-oriented and not to be considered for agent workflows.
 
-## TODO
-* update this readme to explain new workflows
-* review .vibe (PLAN STATE etc.) & meta-templates so ensure we're uptodate everywhere	
+## USAGE
+	- create a new branch from `vibeCoding/basic`
+	- update relevant files (architecture.md, plan.md etc.) to describe the tasks you want done
+	- `git clone` into you new/target project
 
 This repository tracks agentic work using state files only.
 
