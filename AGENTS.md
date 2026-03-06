@@ -29,6 +29,13 @@ No Python orchestrator is required.
 - Limit interventions and changes to what is necessary to meet acceptance criteria
 - Human reviews after each checkpoint.
 
+## Metafile updates (PLAN.md, STATE.md, HISTORY.md)
+- If a checkpoint is changed to DONE, you must update the metafile accordingly (by the agent or a human)
+- NEVER remove checkpoints from PLAN.md, unless explicitely asked to
+- NEVER re-number the checkpoints (unless explicitely asked to)
+-
+
+
 ## Checkpoint format (PLAN.md)
 
 For each checkpoint we should have:
