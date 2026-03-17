@@ -4,6 +4,7 @@ This document is human-oriented and not to be considered for agent workflows.
 
 ## ROADMAP - VIBECODING
 * Add instructions so PR title ALWAYS contain: <stage> - <checkpoint> - <checkpoint title> from plan.md
+* Move stage MOST RECENT (highest #) to top of file, decreasing. Checkpoint within a stage can remain increasing numbers (so 5.0, 5.1, 5.2, 4.0, 4.1, 3.0, ...)
 
 ## TODO
 * update this readme to explain new workflows
