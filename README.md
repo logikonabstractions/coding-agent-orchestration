@@ -2,6 +2,9 @@
 
 This document is human-oriented and not to be considered for agent workflows.
 
+## ROADMAP - VIBECODING
+* Add instructions so PR title ALWAYS contain: <stage> - <checkpoint> - <checkpoint title> from plan.md
+
 ## TODO
 * update this readme to explain new workflows
 * review .vibe (PLAN STATE etc.) & meta-templates so ensure we're uptodate everywhere	
