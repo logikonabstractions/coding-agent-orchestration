@@ -1,6 +1,6 @@
 # ARCHITECTURE DESCRIPTION
 
-The response must provide one or more architectural component, adhering to this format and describes the solution.
+The response must provide one or more architectural elements, adhering to this format.
 
 
 # PROBLEM STATEMENT
@@ -25,14 +25,14 @@ The response must provide one or more architectural component, adhering to this 
 
 - <assumptions>
 
-## Architectural components
+## Architectural elements
 
 Repeat & fill this template as needed. Follow the numbering convention.
 
-### 10 — <Component name>
+### 10 — <Element name>
 
 - Category:
-  - <client / domain service / orchestration / identity and access / data persistence / messaging / external integration / observability / other> 
+  - <client / domain service / orchestration / identity and access / data persistence / messaging / external integration / observability / other>
 - Purpose:
   - <why this exists>
 - Responsibilities:
@@ -43,7 +43,7 @@ Repeat & fill this template as needed. Follow the numbering convention.
   - Outgoing:
     - <responses / commands / events / downstream outputs>
 - Data / state:
-  - <what data or state this component owns, reads, writes, persists, or exposes>
+  - <what data or state this element owns, reads, writes, persists, or exposes>
 - Interactions:
   - User-facing:
     - <if applicable>
@@ -56,11 +56,11 @@ Repeat & fill this template as needed. Follow the numbering convention.
 - Observability / operational considerations:
   - <logging / monitoring / auditability / failure visibility / admin concerns>
 - Dependencies:
-  - <Components IDs>
+  - <Element IDs>
 - Constraints / notes:
   - <important remarks>
 - Principal alternative (optional)
-  - 1-2 sentence, do not systematically  include with all components. But when a there are strong reasons to consider 2 options as very close, describe here your 2nd best choice for this component.
+  - 1-2 sentences. Do not systematically include with all elements. Only when there are strong reasons to consider 2 options as very close, describe your 2nd best choice here.
 
 ## System interaction summary
 

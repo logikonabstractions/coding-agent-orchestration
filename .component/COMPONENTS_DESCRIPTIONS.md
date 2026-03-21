@@ -1,15 +1,15 @@
 # COMPONENTS DESCRIPTION
 
-The response must provide a component-level design for **one parent architectural component**.
+The response must provide a component-level design for **one parent architectural element**.
 
 # PROBLEM STATEMENT
 
-## Parent architectural component
+## Parent architectural element
 
 - Parent ID:
   - <10 | 20 | 30 | ...>
 - Parent name:
-  - <name from architecture layer>
+  - <name from architecture description>
 - Parent purpose:
   - <short summary of the parent architectural role>
 
@@ -28,14 +28,14 @@ Repeat & fill this template as needed. Follow the numbering convention.
 - Category:
   - <Frontend system / API service / worker / database / queue / adapter / storage / external integration / observability / other>
 - Purpose:
-  - <why this internal component exists>
+  - <why this component exists>
 - Technology choice:
   - <specific framework / product / runtime / service / library>
 - Responsibilities:
   - <responsibilities>
 - Interfaces:
   - Incoming:
-    - <requests / commands / events / data >
+    - <requests / commands / events / data>
   - Outgoing:
     - <requests / commands / events / data>
 - Data / state:
@@ -44,7 +44,7 @@ Repeat & fill this template as needed. Follow the numbering convention.
   - Internal:
     - <other x.y components>
   - External:
-    - <architectural components outside the parent scope, if relevant>
+    - <architectural elements outside the parent scope, if relevant>
 - Observability / operational considerations:
   - <logs / metrics / tracing / admin / scaling / failure visibility>
 - Constraints / notes:
