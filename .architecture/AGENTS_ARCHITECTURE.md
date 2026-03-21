@@ -2,23 +2,23 @@
 
 ## Purpose
 
-Translate a product or problem statement into an **architectural design**. This further specifies `AGENTS.md` for this mode.
+Translate a product or problem statement into an **architectural design**.
 
 ## Instruction precedence & read order
 1. As specified by `AGENTS.md`
 2. This file
 3. `.architecture/ARCHITECTURE_DESCRIPTION.md`
 4. `.architecture/STATE.md`
-6. `.architecture/HISTORY.md`
+5. `.architecture/HISTORY.md`
 
 ## Meta-templates
 
-For this mode, found under /META_TEMPLATES/.architecture
+Found under `/meta_templates/.architecture`
 
 | File | Role |
 |------|------|
-| `architecture_description_tplt.md` | Format for each architectural elements outputs in this mode |
-| `state_tlpt.md` | Current draft, focus, active blockers, work log |
+| `architecture_description_tplt.md` | Format for each architectural element description |
+| `state_tplt.md` | Current draft, focus, active blockers, work log |
 | `history_tplt.md` | Resolved questions, completed review rounds, durable decisions |
 
 ## Scope
@@ -48,8 +48,7 @@ Do **not** use concrete product names.
 
 ## Element rule
 
-Architectural elements must represent **meaningful system capabilities**.
-They must be large enough to matter at system-design level and small enough to have a clear responsibility.
+Architectural elements must be large enough to matter at system-design level and small enough to have a clear responsibility.
 
 Do not model low-level implementation artifacts as architectural elements.
 
@@ -57,8 +56,3 @@ Do not model low-level implementation artifacts as architectural elements.
 
 Use top-level element numbering in increments of 10 (10, 20, 30...)
 
-## Architecture planning rule
-
-Use `.architecture/HISTORY.md` to track evolutions & decisions made at each iterations.
-
-Use `.architecture/STATE.md` to track the currently active architecture issue, current focus, active blockers, and work in progress.

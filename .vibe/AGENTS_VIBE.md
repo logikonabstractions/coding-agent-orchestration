@@ -1,42 +1,53 @@
 # VIBE Workflow Contract
 
+## Purpose
+
+Translate **one component** into implementable stages and checkpoints, then implement them. This mode has two sub-modes: **VIBE-DRAFT** (planning) and **VIBE-IMPLEMENT** (coding).
+
 ## Input requirements
 
-The either a <COMPONENT ID> or <COMPONENT NAME> with the instruction sto draft a Stage & Checkpoint PLAN.d to implement this component (this is the VIBE-DRAFT). Or the ID of a specific checkpoint corresonding to a checkpoint in `.vibe/PLAN.md` (the VIBE-IMPLEMENT).
+Provide **one** of the following:
 
-### VIBE-DRAFT: Draft stages & checkpoint to implement a specific component description 
+- **A component identifier** (ID or name, e.g. "component 10.2") → triggers **VIBE-DRAFT**
+- **A checkpoint identifier** (e.g. "checkpoint 10.2.1.1") matching an entry in `.vibe/PLAN.md` → triggers **VIBE-IMPLEMENT**
 
-If the input provided you with <Component ID> - <Component name>, refer to  `.components/COMPONENTS_DESCRIPTIONS.md`. Draft the PLAN.md for this mode. Establish relevant STAGES (e.g. closely related implementation steps) and checkpoints (smaller steps within a given stage). 
+If the input is ambiguous, ask to confirm which sub-mode applies.
 
-In that case, read these files for background & references only:
-#### Instruction precedence & read order
+---
+
+## VIBE-DRAFT — Plan stages and checkpoints for a component
+
+Given a component identifier, read its description from `.component/COMPONENTS_DESCRIPTIONS.md` and draft `.vibe/PLAN.md`. Organize work into **stages** (groups of related implementation steps) and **checkpoints** (small, reviewable units within a stage).
+
+### Instruction precedence & read order
 1. As specified by `AGENTS.md`
 2. This file
-3. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only, references)
-4. `.component/COMPONENTS_DESCRIPTIONS.md` (read-only, references)
-4. `.vibe/PLAN.md`
-3. `.vibe/STATE.md`
+3. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference)
+4. `.component/COMPONENTS_DESCRIPTIONS.md` (read-only reference)
+5. `.vibe/PLAN.md`
+6. `.vibe/STATE.md`
+7. `.vibe/HISTORY.md`
+8. `.vibe/CONTEXT.md`
+
+---
+
+## VIBE-IMPLEMENT — Implement a specific checkpoint
+
+Given a checkpoint identifier, implement it according to `.vibe/PLAN.md`.
+
+### Instruction precedence & read order
+1. As specified by `AGENTS.md`
+2. This file
+3. `.vibe/PLAN.md`
+4. `.vibe/STATE.md`
 5. `.vibe/HISTORY.md`
 6. `.vibe/CONTEXT.md`
 
-### VIBE-IMPLEMENT: Implement a specific checkpoint
-
-If provided with a specific checkpoint (E.g "vibecode checkpoint 4.1"), then implement the given checkpoint.
-
-Implement specific features based on the checkpoints described in `PLAN.md`. This further specifies `AGENTS.md` for this mode.
-
-#### Instruction precedence & read order
-1. As specified by `AGENTS.md`
-2. This file
-4. `.vibe/PLAN.md`
-3. `.vibe/STATE.md`
-5. `.vibe/HISTORY.md`
-6. `.vibe/CONTEXT.md`
-
+---
 
 ## Meta-templates
 
-Under `../meta_templates/.vibe`
+Found under `/meta_templates/.vibe`
 
 | File | Role |
 |------|------|
@@ -46,17 +57,15 @@ Under `../meta_templates/.vibe`
 | `context_tplt.md` | Shared context: architecture notes, key decisions, gotchas, hot files |
 
 ## Scope and cadence
-- A `STAGE` should include a few related implementation steps
-- A `CHECKPOINT` should be a small and reviewable diff, at most a few commits.
+- A **stage** groups a few related checkpoints.
+- A **checkpoint** is a small, reviewable diff — at most a few commits.
 - Limit changes to what is necessary to meet acceptance criteria.
 
 ## Metafile updates
-- Whenever a checkpoint moves to DONE:
-	- Update `STATE.md` to reflect the new state
-- NEVER remove checkpoints from PLAN.md, unless explicitly asked to
-- NEVER re-number the checkpoints (unless explicitly asked to)
+- When a checkpoint moves to DONE, update `STATE.md` to reflect the new state.
+- NEVER remove checkpoints from `PLAN.md` unless explicitly asked to.
+- NEVER re-number checkpoints unless explicitly asked to.
 
 ## Version control policy
-
 - Commit coherent changes: a commit should be a single set of related and consistent changes towards a given checkpoint.
 - Commit message prefix: `<checkpoint-id>: <imperative summary>`
