@@ -74,3 +74,40 @@ Append the response block directly under the item it answers.
 - Architecture impact:
   - <what changes, stabilizes, or unblocks as a result>
 ```
+
+### Inline example
+
+Below is a **non-normative** example showing a question–response pair.
+
+---
+
+### Arch-0.1 — Data residency requirements
+
+- Type: CLARIFICATION
+- Status: RESOLVED
+- Related system / draft:
+  - Core data platform
+- Why it matters:
+  - Determines whether the storage layer needs region-aware partitioning
+- Known options / hypotheses:
+  - Single-region deployment
+  - Multi-region with data residency enforcement
+- Required input / evidence:
+  - Confirmation from product owner on target markets and regulatory scope
+- Resolution criteria:
+  - Clear list of regions and applicable data residency rules
+- Affected sections:
+  - Component 20 (Persistence layer), Component 40 (API gateway)
+- Notes:
+  - none
+
+#### Response — Arch-0.1
+
+- Date: 2026-03-21
+- Respondent: human
+- Answer:
+  - Single-region (US-East) is sufficient for launch. No EU users expected in first release.
+- Conditions / constraints:
+  - Revisit before expanding to EU markets.
+- Architecture impact:
+  - Storage layer does not need region-aware partitioning for initial architecture. Component 20 simplified.
