@@ -1,14 +1,7 @@
 # STATE
 
-This file keeps track of architectural discussions. Mostly when tricker issues needs sorting with back & forth, or when multiple approaches would meet the objectives and the agent prefers to obtain input. 
+This file track large, "hot topics" that are ongoing. It may not be active all the time.
 
-## Session read order
-
-1. `AGENTS.md` (optional if already read this session)
-2. `.architecture/AGENTS_ARCHITECTURE.md`
-3. `.architecture/STATE.md` (this file)
-4. `.architecture/ARCHITECTURE_DESCRIPTION.md`
-5. `.architecture/HISTORY.md` (optional)
 
 ## State management rules
 

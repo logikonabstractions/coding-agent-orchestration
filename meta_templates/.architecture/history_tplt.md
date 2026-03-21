@@ -11,7 +11,7 @@
 ## Review history
 <!-- Use this for architecture revision rounds -->
 - YYYY-MM-DD — Review round <n>
-  - Architectural components IDs (if relevant): []
+  - Architectural elements IDs (if relevant): []
   - Feedback summary (e.g. from follow-up prompts etc.)
     - <what changed or was requested>
   - Result: <accepted | changes requested | blocked>
@@ -25,7 +25,7 @@
 ## Architectural decisions
 <!-- Keep only decisions worth preserving across revisions. -->
 - YYYY-MM-DD: <decision>
-  - Architectural components IDs (if relevant): []
+  - Architectural elements IDs (if relevant): []
   - Rationale: <1–2 lines>
   - Impact: <what parts of the architecture this affects>
 

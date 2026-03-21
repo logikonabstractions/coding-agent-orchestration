@@ -9,7 +9,6 @@ Translate a product or problem statement into an **architectural design**. This 
 2. This file
 3. `.architecture/ARCHITECTURE_DESCRIPTION.md`
 4. `.architecture/STATE.md`
-5. `.architecture/PLAN.md`
 6. `.architecture/HISTORY.md`
 
 ## Meta-templates
@@ -20,8 +19,7 @@ For this mode, found under /META_TEMPLATES/.architecture
 |------|------|
 | `architecture_description_tplt.md` | Format for each architectural elements outputs in this mode |
 | `state_tlpt.md` | Current draft, focus, active blockers, work log |
-| `plan_tplt.md` | Blocking architectural questions requiring discussion or decision |
-| `state_tplt.md` | Resolved questions, completed review rounds, durable decisions |
+| `history_tplt.md` | Resolved questions, completed review rounds, durable decisions |
 
 ## Scope
 
@@ -57,15 +55,10 @@ Do not model low-level implementation artifacts as architectural elements.
 
 ## Numbering rules
 
-Use top-level element numbering in increments of 10:
-
-- 10
-- 20
-- 30
-- 40
+Use top-level element numbering in increments of 10 (10, 20, 30...)
 
 ## Architecture planning rule
 
-Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this for minor decisions. Keep it for blocking architectural choices.
+Use `.architecture/HISTORY.md` to track evolutions & decisions made at each iterations.
 
-Use `.architecture/STATE.md` to track the currently active architecture draft, current focus, active blockers, and work log.
+Use `.architecture/STATE.md` to track the currently active architecture issue, current focus, active blockers, and work in progress.

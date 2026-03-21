@@ -1,12 +1,14 @@
 **Template file, copy but do not edit**
 
 
-## Stage 0 — <stage name>
+## Stage <COMPONENT ID>.<STAGE> — <stage name>
 
-### 0.0 — <checkpoint name>
+### <COMPONENT ID>.<STAGE>.<CHECKPOINT> — <checkpoint name>
 
 - Objective:
   - <1 sentence>
+- Notes:
+ - <notable technical elements for this checkpoint>
 - Deliverables:
   - <files and modules to be created, deleted, or update>
 - Acceptance:

@@ -1,19 +1,19 @@
 # VIBE Workflow Contract
 
-## Purpose
+## Input requirements
 
-Depending on input provided to you:
+The either a <COMPONENT ID> or <COMPONENT NAME> with the instruction sto draft a Stage & Checkpoint PLAN.d to implement this component (this is the VIBE-DRAFT). Or the ID of a specific checkpoint corresonding to a checkpoint in `.vibe/PLAN.md` (the VIBE-IMPLEMENT).
 
 ### VIBE-DRAFT: Draft stages & checkpoint to implement a specific component description 
 
-If the input provided you with <Component ID> - <Component name>, refer to  `../components/COMPONENTS_DESCRIPTIONS.md`. Draft the PLAN.md for this mode. Establish relevant STAGES (e.g. closely related implementation steps) and checkpoints (smaller steps within a given stage). 
+If the input provided you with <Component ID> - <Component name>, refer to  `.components/COMPONENTS_DESCRIPTIONS.md`. Draft the PLAN.md for this mode. Establish relevant STAGES (e.g. closely related implementation steps) and checkpoints (smaller steps within a given stage). 
 
 In that case, read these files for background & references only:
 #### Instruction precedence & read order
 1. As specified by `AGENTS.md`
 2. This file
-3. `../architecture/ARCHITECTURE_DESCRIPTION.md` (read-only, references)
-4. `../component/COMPONENTS_DESCRIPTIONS.md` (read-only, references)
+3. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only, references)
+4. `.component/COMPONENTS_DESCRIPTIONS.md` (read-only, references)
 4. `.vibe/PLAN.md`
 3. `.vibe/STATE.md`
 5. `.vibe/HISTORY.md`

@@ -18,7 +18,6 @@ Translate **one architectural element** into a **component-level design**. This 
 |------|------|
 | `components_description_tplt.md` | Output template and deliverable for the component design |
 | `state_tplt.md` | Blocking issues requiring immediate attention |
-| `plan_tplt.md` | Component-level questions requiring discussion or decision |
 | `history_tplt.md` | Resolved questions and completed component reviews |
 
 ## Scope
@@ -33,7 +32,7 @@ The prompt must provide or reference:
 
 If the architecture has not been reviewed/approved (status ≠ DONE in `.architecture/STATE.md`), log a warning in `.component/STATE.md` but proceed unless explicitly told to stop.
 
-## Abstraction level
+## Abstraction rules
 
 Describe components by **concrete role and technology** for a **buildable unit of work** required to implement the target architectural element.
 
@@ -56,6 +55,6 @@ There is no fixed upper bound on component count — use as many as relevant. Yo
 
 ## Planning rule
 
-Use `.component/PLAN.md` to track component-level questions that require discussion, investigation, or explicit decision. What needs to happen next so we can advance the development of the components for this project.
+Use `.component/HISTORY.md` to document evoluations, decisions, iterations.
 
-Use `.component/STATE.md` for blocking issues that require immediate attention before moving forward.
+Use `.component/STATE.md` for blocking issues that require immediate attention before moving forward, ongoing work or discussions not completed.
