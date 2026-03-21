@@ -66,4 +66,4 @@ Use `.architecture/HISTORY.md` to archive resolved questions, completed review r
 
 1. Create an `Arch-N.N` item in `PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
 2. When a response is received, append a `#### Response — Arch-N.N` block under the item (see response template in `PLAN.md`).
-3. Once the question is fully resolved, mark the item `RESOLVED` in `PLAN.md` and summarize the exchange into `HISTORY.md` under **Resolved questions**. The summary must include the question title, the answer, and the architecture impact. Keep it concise — `PLAN.md` retains the full record.
+3. Once the question is fully resolved, mark the item `RESOLVED` in `PLAN.md` and summarize the exchange into `HISTORY.md` under **Resolved questions**. Keep it concise — `PLAN.md` retains the full record.
