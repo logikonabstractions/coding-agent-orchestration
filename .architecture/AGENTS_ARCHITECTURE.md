@@ -14,12 +14,14 @@ Translate a product or problem statement into an **architectural design**. This 
 
 ## Meta-templates
 
+For this mode, found under /META_TEMPLATES/.architecture
+
 | File | Role |
 |------|------|
-| `ARCHITECTURE_DESCRIPTION.md` | Output template and deliverable for the architectural design |
-| `STATE.md` | Current draft, focus, active blockers, work log |
-| `PLAN.md` | Blocking architectural questions requiring discussion or decision |
-| `HISTORY.md` | Resolved questions, completed review rounds, durable decisions |
+| `architecture_description_tplt.md` | Format for each architectural elements outputs in this mode |
+| `state_tlpt.md` | Current draft, focus, active blockers, work log |
+| `plan_tplt.md` | Blocking architectural questions requiring discussion or decision |
+| `state_tplt.md` | Resolved questions, completed review rounds, durable decisions |
 
 ## Scope
 

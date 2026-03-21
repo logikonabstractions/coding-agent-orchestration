@@ -17,10 +17,10 @@ Translate **one architectural element** into a **component-level design**. This 
 
 | File | Role |
 |------|------|
-| `COMPONENTS_DESCRIPTIONS.md` | Output template and deliverable for the component design |
-| `STATE.md` | Blocking issues requiring immediate attention |
-| `PLAN.md` | Component-level questions requiring discussion or decision |
-| `HISTORY.md` | Resolved questions and completed component reviews |
+| `components_description_tplt.md` | Output template and deliverable for the component design |
+| `state_tplt.md` | Blocking issues requiring immediate attention |
+| `plan_tplt.md` | Component-level questions requiring discussion or decision |
+| `history_tplt.md` | Resolved questions and completed component reviews |
 
 ## Scope
 
