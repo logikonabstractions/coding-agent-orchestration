@@ -11,10 +11,13 @@
 - Status: NOT_STARTED  <!-- one of: NOT_STARTED | IN_PROGRESS | IN_REVIEW | BLOCKED | DONE -->
 
 ## Objective (current checkpoint)
-<!-- 1 sentence. Keep in sync with PLAN.md for the active checkpoint. -->
+<!-- 1 sentence. Keep in sync with PLAN.md for the active checkpoint and reference the implementation component it advances when available. -->
 
 ## Deliverables (current checkpoint)
 <!-- Concrete files/modules/behaviors. Keep in sync with PLAN.md for the active checkpoint. -->
+
+## Upstream traceability
+<!-- Reference the implementation component ID(s) and parent architectural element ID when known. -->
 
 ## Acceptance (current checkpoint)
 <!-- Verifiable conditions. Keep in sync with PLAN.md for the active checkpoint. -->

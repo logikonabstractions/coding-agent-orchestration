@@ -10,8 +10,8 @@ This file track large, "hot topics" that are ongoing. It may not be active all t
 - Target element: <10 | 20 | 30 | …>
 - Revision ID: Comp.<element>.0.1
 
-## Objective (current breakdown)
-<!-- 1 sentence. Keep aligned with the target element in `.architecture/ARCHITECTURE_DESCRIPTION.md`. -->
+## Objective (current component design)
+<!-- 1 sentence. Keep aligned with the selected parent architectural element in `.architecture/ARCHITECTURE_DESCRIPTION.md`. -->
 
 ## Active assumptions / constraints
 <!-- Keep only the assumptions or constraints that materially affect the current component breakdown. -->

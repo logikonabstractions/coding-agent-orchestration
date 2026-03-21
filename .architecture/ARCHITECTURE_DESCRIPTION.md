@@ -1,6 +1,6 @@
 # ARCHITECTURE DESCRIPTION
 
-The response must provide one or more architectural component, adhering to this format and describes the solution.
+The response must provide one or more architectural elements that together describe the solution, following this format.
 
 
 # PROBLEM STATEMENT
@@ -25,11 +25,11 @@ The response must provide one or more architectural component, adhering to this 
 
 - <assumptions>
 
-## Architectural components
+## Architectural elements
 
 Repeat & fill this template as needed. Follow the numbering convention.
 
-### 10 — <Component name>
+### 10 — <Architectural element name>
 
 - Category:
   - <client / domain service / orchestration / identity and access / data persistence / messaging / external integration / observability / other> 
@@ -56,7 +56,7 @@ Repeat & fill this template as needed. Follow the numbering convention.
 - Observability / operational considerations:
   - <logging / monitoring / auditability / failure visibility / admin concerns>
 - Dependencies:
-  - <Components IDs>
+  - <Architectural element IDs>
 - Constraints / notes:
   - <important remarks>
 - Principal alternative (optional)

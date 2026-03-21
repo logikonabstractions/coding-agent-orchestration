@@ -1,57 +1,69 @@
-# COMPONENT Workflow Contract
+# COMPONENT workflow contract
 
 ## Purpose
 
-Translate **one architectural component** into a **component-level design**. This further specifies `AGENTS.md` for this mode.
+Translate **one architectural element** into a **component design**. This file further specifies `AGENTS.md` for component mode.
 
 ## Instruction precedence & read order
+
 1. As specified by `AGENTS.md`
 2. This file
-3. `.component/COMPONENTS_DESCRIPTION.md`
-4. `.component/STATE.md`
+3. `.component/STATE.md`
+4. `.component/COMPONENTS_DESCRIPTIONS.md`
 5. `.component/PLAN.md`
 6. `.component/HISTORY.md`
-7. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference)
+7. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only input reference)
+8. `.architecture/STATE.md` (read-only approval/status reference)
 
 ## Scope
 
-This layer receives **exactly one architectural element** (identified by its top-level number: 10, 20, 30…) and breaks it down into the concrete components required to implement it.
+This layer receives **exactly one architectural element** identified by its top-level number (`10`, `20`, `30`, ...). It breaks that architectural element down into the implementation components required to build it.
 
-If it is not clear which element is being targeted, you MUST ask to confirm.
+If it is not clear which architectural element is being targeted, you MUST ask to confirm.
 
-## Abstraction level for components
+## Handoff contract
 
-Describe components by **concrete role and technology** for a **buildable unit of work** that are required to implement the target architectural component.
+Component mode exists specifically to bridge architecture mode and vibe mode.
 
-The correct level of abstraction for a component (10.1, 10.2, ...) is one where:
-- A specific technology (or set of technologies) is (are) identified for implementation
-- The component has a clear objective and coherent set of responsabilities
-- It maps to a recognizable delivrable (a service, a schema, a configured runtime, a UI module, ...)
-- it remains large enough to likely require work on a few different features in order to deliver (roughly the size of one or a few "SPRINT" in AGILE).
+Its output must therefore:
 
-For example, a component could be: "Authentication mechanism", with chosen technlogies (e.g. Oauth 2.0 implemented with Passport.js, hashing with bcrypt, ...). It should not be "A social media app" (that's too broad) nor should it be "A sign-in form" (this would be a checkpoint to implement).
+- keep a clear reference to the selected parent architectural element
+- define implementation components that can be worked on independently or in small groups
+- provide enough implementation direction that vibe mode can derive concrete checkpoints from one or more implementation components
 
+## Abstraction level for implementation components
+
+Describe implementation components by **concrete role and technology** as **buildable units of work** required to implement the selected architectural element.
+
+The correct level of abstraction for an implementation component (`10.1`, `10.2`, ...) is one where:
+
+- a specific technology or small technology set is identified for implementation
+- the component has a clear objective and coherent responsibilities
+- it maps to a recognizable deliverable such as a service, schema, configured runtime, UI module, or integration boundary
+- it remains large enough to require meaningful implementation effort, but small enough to support checkpoint planning in vibe mode
+
+For example, a valid implementation component could be an authentication service with selected technologies. It should not be the whole product, and it should not be a tiny implementation task such as a single form.
 
 ## Numbering rules
 
-Components are numbered as sub-elements of their main parent architectural element:
+Implementation components are numbered as sub-elements of their parent architectural element:
 
-- Architectural element 10 → components 10.1, 10.2, …, 10.14...
-- Architectural element 20 → components 20.1, 20.2, 20.3 …
+- Architectural element 10 → implementation components 10.1, 10.2, ...
+- Architectural element 20 → implementation components 20.1, 20.2, ...
 
-There is no fixed upper bound on component count — use as many as relevant.You can group related components in the same unit (e.g. 10.1, 10.2, 11.1, 11.2, 11.3 for set of closely related components).
+There is no fixed upper bound on component count. Group related implementation components only when that grouping still preserves clear ownership and a clean handoff to vibe checkpoints.
 
 ## Input requirements
+
 The prompt must provide or reference:
-- the target architectural element number (e.g. "element 10")
-- access to the current `.architecture/ARCHITECTURE_DESCRIPTION.md` (or its relevant section)
 
-If the architecture has not been reviewed/approved (status ≠ DONE in `.architecture/STATE.md`), log a warning in `.component/STATE.md` but proceed unless explicitly told to stop.
+- the target architectural element number, for example `element 10`
+- access to the current `.architecture/ARCHITECTURE_DESCRIPTION.md`, or at least the relevant parent section
 
-## Agentic Workflow Files to Update
+If the architecture has not been reviewed or approved (`status != DONE` in `.architecture/STATE.md`), log a warning in `.component/STATE.md` but proceed unless explicitly told to stop.
 
-`.component/PLAN.md` to track component-level questions that require discussion, investigation, or explicit decision. What needs to happen next so we can advance the development of the components for this project.
+## Workflow file usage
 
-Use `.component/STATE.md` OPTIONAL, to track core, hot topic issues that required immediate attention before moving forward. Blocking items.
-
-Use `.component/HISTORY.md` to archive resolved questions and completed component reviews at each iteration.
+- Use `.component/PLAN.md` to track component-design questions that require discussion, investigation, or explicit decision.
+- Use `.component/STATE.md` to track active blockers, warnings, or issues that materially affect the current component design.
+- Use `.component/HISTORY.md` to archive resolved questions, completed component reviews, and durable design decisions.

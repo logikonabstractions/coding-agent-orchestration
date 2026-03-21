@@ -1,10 +1,10 @@
 # COMPONENTS DESCRIPTION
 
-The response must provide a component-level design for **one parent architectural component**.
+The response must provide a component design for **one parent architectural element**.
 
 # PROBLEM STATEMENT
 
-## Parent architectural component
+## Parent architectural element
 
 - Parent ID:
   - <10 | 20 | 30 | ...>
@@ -23,7 +23,7 @@ The response must provide a component-level design for **one parent architectura
 
 Repeat & fill this template as needed. Follow the numbering convention.
 
-### 10.1 — <Component name>
+### 10.1 — <Implementation component name>
 
 - Category:
   - <Frontend system / API service / worker / database / queue / adapter / storage / external integration / observability / other>
@@ -44,7 +44,7 @@ Repeat & fill this template as needed. Follow the numbering convention.
   - Internal:
     - <other x.y components>
   - External:
-    - <architectural components outside the parent scope, if relevant>
+    - <architectural elements outside the parent scope, if relevant>
 - Observability / operational considerations:
   - <logs / metrics / tracing / admin / scaling / failure visibility>
 - Constraints / notes:
@@ -54,4 +54,4 @@ Repeat & fill this template as needed. Follow the numbering convention.
 
 ## Open questions
 
-- <question requiring human/component-design decision>
+- <question requiring a human or component-design decision>

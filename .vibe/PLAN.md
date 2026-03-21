@@ -66,7 +66,7 @@
   - Console output showing the frontend is launched
 
 
-### 0.0 — <Configuration to save input to SQLite>
+### 0.3 — <Configuration to save input to SQLite>
 
 - Objective:
   - Update project configuration so that hitting the submit button will save the content of the input field into the DB in a persistant manner
