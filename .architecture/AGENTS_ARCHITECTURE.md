@@ -56,8 +56,14 @@ Use top-level component numbering in increments of 10:
 
 ## Architecture planning rule
 
-Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for  blocking architectural choices.
+Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for blocking architectural choices.
 
 Use `.architecture/STATE.md` to track the currently active architecture draft, current focus, active blockers, and work log.
 
 Use `.architecture/HISTORY.md` to archive resolved questions, completed review rounds, and durable architecture decisions.
+
+## Question lifecycle
+
+1. Create an `Arch-N.N` item in `PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
+2. When a response is received, append a `#### Response — Arch-N.N` block under the item (see response template in `PLAN.md`).
+3. Once the question is fully resolved, mark the item `RESOLVED` in `PLAN.md` and summarize the exchange into `HISTORY.md` under **Resolved questions**. Keep it concise — `PLAN.md` retains the full record.
