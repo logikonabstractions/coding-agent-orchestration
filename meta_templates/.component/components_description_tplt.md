@@ -1,29 +1,6 @@
-# COMPONENTS DESCRIPTION
+**Template file, copy but do not edit**
 
-The response must provide a component-level design for **one parent architectural element**.
-
-# PROBLEM STATEMENT
-
-## Parent architectural element
-
-- Parent ID:
-  - <10 | 20 | 30 | ...>
-- Parent name:
-  - <name from architecture description>
-- Parent purpose:
-  - <short summary of the parent architectural role>
-
-## Assumptions
-- <assumptions>
-
-## Constraints
-- <important constraints: inherited from the architecture, inherent to tech choices, etc.>
-
-## Component breakdown
-
-Repeat & fill this template as needed. Follow the numbering convention.
-
-### <ARCHIECTURAL_ELEMENT_ID.X> — <Component name>
+### 10.1 — <Component name>
 
 - Category:
   - <Frontend system / API service / worker / database / queue / adapter / storage / external integration / observability / other>
