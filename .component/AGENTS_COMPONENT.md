@@ -53,10 +53,10 @@ Components are numbered as sub-elements of their parent architectural element:
 - Architectural element 10 → components 10.1, 10.2, ..., 10.14...
 - Architectural element 20 → components 20.1, 20.2, 20.3 ...
 
-There is no fixed upper bound on component count — use as many as relevant. You can group related components in the same unit (e.g. 10.1, 10.2, 11.1, 11.2, 11.3 for sets of closely related components).
+There is no fixed upper bound on component count — use as many as relevant.
 
 ## Planning rule
 
-Use `.component/PLAN.md` to track component-level questions that require discussion, investigation, or explicit decision. What needs to happen next so we can advance the development of the components for this project.
+Use `.component/PLAN.md` to track component-level questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this for minor decisions. Keep it for blocking component-design choices.
 
-Use `.component/STATE.md` for blocking issues that require immediate attention before moving forward.
+Use `.component/STATE.md` to track the currently active component breakdown, current focus, active blockers, and work log.

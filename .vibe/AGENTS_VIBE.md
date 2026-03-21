@@ -4,34 +4,24 @@
 
 Depending on input provided to you:
 
-### VIBE-DRAFT: Draft stages & checkpoint to implement a specific component description 
+### VIBE-DRAFT: Draft stages & checkpoints for a specific component
 
-If the input provided you with <Component ID> - <Component name>, refer to  `../components/COMPONENTS_DESCRIPTIONS.md`. Draft the PLAN.md for this mode. Establish relevant STAGES (e.g. closely related implementation steps) and checkpoints (smaller steps within a given stage). 
-
-In that case, read these files for background & references only:
-#### Instruction precedence & read order
-1. As specified by `AGENTS.md`
-2. This file
-3. `../architecture/ARCHITECTURE_DESCRIPTION.md` (read-only, references)
-4. `../component/COMPONENTS_DESCRIPTIONS.md` (read-only, references)
-4. `.vibe/PLAN.md`
-3. `.vibe/STATE.md`
-5. `.vibe/HISTORY.md`
-6. `.vibe/CONTEXT.md`
+The input must provide a **component ID** from `.component/COMPONENTS_DESCRIPTIONS.md` (e.g. `10.2 — Auth Service`). Draft the `PLAN.md` for this mode. Establish relevant **stages** (groups of closely related implementation steps) and **checkpoints** (smaller steps within a given stage).
 
 ### VIBE-IMPLEMENT: Implement a specific checkpoint
 
-If provided with a specific checkpoint (E.g "vibecode checkpoint 4.1"), then implement the given checkpoint.
+The input must provide a specific **checkpoint** from `.vibe/PLAN.md` (e.g. "checkpoint 1.2"). Implement the given checkpoint.
 
-Implement specific features based on the checkpoints described in `PLAN.md`. This further specifies `AGENTS.md` for this mode.
+### Instruction precedence & read order
 
-#### Instruction precedence & read order
 1. As specified by `AGENTS.md`
 2. This file
-4. `.vibe/PLAN.md`
-3. `.vibe/STATE.md`
+3. `.vibe/PLAN.md`
+4. `.vibe/STATE.md`
 5. `.vibe/HISTORY.md`
 6. `.vibe/CONTEXT.md`
+7. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference, VIBE-DRAFT only)
+8. `.component/COMPONENTS_DESCRIPTIONS.md` (read-only reference, VIBE-DRAFT only)
 
 
 ## Meta-templates
