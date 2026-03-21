@@ -9,8 +9,7 @@ Translate **one architectural element** into a **component-level design**. This 
 2. This file
 3. `.component/COMPONENTS_DESCRIPTIONS.md`
 4. `.component/STATE.md`
-5. `.component/PLAN.md`
-6. `.component/HISTORY.md`
+5. `.component/HISTORY.md`
 7. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference)
 
 ## Meta-templates
@@ -18,8 +17,7 @@ Translate **one architectural element** into a **component-level design**. This 
 | File | Role |
 |------|------|
 | `components_description_tplt.md` | Output template and deliverable for the component design |
-| `state_tplt.md` | Blocking issues requiring immediate attention |
-| `plan_tplt.md` | Component-level questions requiring discussion or decision |
+| `state_tplt.md` | Current focus, active blockers, work log |
 | `history_tplt.md` | Resolved questions and completed component reviews |
 
 ## Scope
@@ -55,8 +53,6 @@ Components are numbered as sub-elements of their parent architectural element:
 
 There is no fixed upper bound on component count — use as many as relevant.
 
-## Planning rule
-
-Use `.component/PLAN.md` to track component-level questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this for minor decisions. Keep it for blocking component-design choices.
+## State tracking
 
 Use `.component/STATE.md` to track the currently active component breakdown, current focus, active blockers, and work log.
