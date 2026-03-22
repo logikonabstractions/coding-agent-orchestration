@@ -2,57 +2,60 @@
 
 ## Purpose
 
-Translate a product or problem statement into an **architectural design**. This further specificies `AGENTS.md` for this mode.
+Translate a product or problem statement into an **architectural design**.
 
 ## Instruction precedence & read order
 1. As specified by `AGENTS.md`
 2. This file
 3. `.architecture/ARCHITECTURE_DESCRIPTION.md`
 4. `.architecture/STATE.md`
-5. `.architecture/PLAN.md`
-6. `.architecture/HISTORY.md`
+5. `.architecture/HISTORY.md`
+
+## Meta-templates
+
+Found under `/meta_templates/.architecture`
+
+| File | Role |
+|------|------|
+| `architecture_description_tplt.md` | Format for each architectural element description |
+| `state_tplt.md` | Current draft, focus, active blockers, work log |
+| `history_tplt.md` | Resolved questions, completed review rounds, durable decisions |
 
 ## Scope
 
-This layer must define the major architectural parts of the target system, the responsibility of each, how they interact, and the main system-wide concerns.
+This mode must define the major architectural elements of the target system, the responsibility of each, how they interact, and the main system-wide concerns.
 
 It must not define implementation strategies or concrete technology choices (for example: specific frameworks, databases, cloud products, or vendors).
 
 ## Core output
 
-The deliverable is a markdown document that gives a **structured architectural breakdown** of the proposed solution.
+The deliverable is a markdown document that gives a **structured architectural breakdown** of the proposed solution, conforming to `ARCHITECTURE_DESCRIPTION.md`.
 
 The output must:
 
 - describe the target system in plain language
-- identify the major architectural components required
-- describe each component at the **functional type** level
-- define responsibilities for each component
-- capture the important interfaces and interactions between components
+- identify the major architectural elements required
+- describe each element at the **functional type** level
+- define responsibilities for each element
+- capture the important interfaces and interactions between elements
 - capture relevant system-wide concerns, assumptions, constraints, and open questions
-- conform to `.architecture/ARCHITECTURE_OUTPUT_FORMAT.md`
 
 ## Abstraction rule
 
-Describe components by **role**, not by implementation choice.
+Describe elements by **role**, not by implementation choice.
 
 Do **not** use concrete product names.
 
-## Component rule
+## Element rule
 
-Architectural components must represent **meaningful system capabilities**.
-They must be large enough to matter at system-design level and small enough to have a clear responsibility.
+Architectural elements must be large enough to matter at system-design level and small enough to have a clear responsibility.
 
-Do not model low-level implementation artifacts as architectural components.
+Do not model low-level implementation artifacts as architectural elements.
 
 ## Numbering rules
 
-Use top-level component numbering in increments of 10:
+Use top-level element numbering in increments of 10 (10, 20, 30...)
 
-- 10
-- 20
-- 30
-- 40
 
 ## Architecture planning rule
 

@@ -1,11 +1,4 @@
-# STATE
-
-## Session read order
-
-1) `AGENTS.md` (optional if already read this session)
-2) `.vibe/STATE.md` (this file)
-3) `.vibe/PLAN.md`
-4) `.vibe/HISTORY.md` (optional)
+**Template file, copy but do not edit**
 
 ## Current focus
 
@@ -24,6 +17,7 @@
 
 ## Work log (current session)
 <!-- Append-only bullets for what changed and why. Prefer file/line references. -->
+- 2026-03-05: Updated `README.md` and `VIBE.md` to point to canonical meta templates instead of re-embedding template definitions, reducing doc duplication.
 
 ## Evidence
 <!-- Paste command outputs, links to commits/PRs, screenshots, etc. -->
