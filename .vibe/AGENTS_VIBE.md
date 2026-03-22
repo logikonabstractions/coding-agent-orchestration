@@ -6,14 +6,13 @@ Translate **one component** into implementable stages and checkpoints, then impl
 
 ## Input requirements
 
-Provide **one** of the following:
+**MUST contain one** of the following:
 
 - **A component identifier** (ID or name, e.g. "component 10.2") → triggers **VIBE-DRAFT**
 - **A checkpoint identifier** (e.g. "checkpoint 10.2.1.1") matching an entry in `.vibe/PLAN.md` → triggers **VIBE-IMPLEMENT**
 
-If the input is ambiguous, ask to confirm which sub-mode applies.
+If the input is ambiguous, **always ask to confirm** which sub-mode applies.
 
----
 
 ## VIBE-DRAFT — Plan stages and checkpoints for a component
 
@@ -67,6 +66,5 @@ Found under `/meta_templates/.vibe`
 - NEVER re-number checkpoints unless explicitly asked to.
 
 ## Version control policy
-- Branch naming for agent-created branches: `codex/{feature}`.
+- The commit message MUST ALWAYS follow this format for `VIBE-IMPLEMENT` (and if you can, the PR title/message as well): <checkpoint-id> - <checkpoint name>
 - Commit coherent changes: a commit should be a single set of related and consistent changes towards a given checkpoint.
-- Commit message prefix: `<checkpoint-id>: <imperative summary>`
