@@ -1,6 +1,6 @@
 # STATE
 
-This file track large, "hot topics" that are ongoing. It may not be active all the time.
+This file tracks large, "hot topics" that are ongoing. It may not be active all the time.
 
 ## State management rules
 - Keep this file focused on current execution state. Put rollups and resolved items in `HISTORY.md`.

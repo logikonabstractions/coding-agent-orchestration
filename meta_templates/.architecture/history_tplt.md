@@ -11,10 +11,16 @@
 ## Review history
 <!-- Use this for architecture revision rounds -->
 - YYYY-MM-DD — Review round <n>
-  - Architectural elements IDs (if relevant): []
+  - Architectural element IDs (if relevant): []
   - Feedback summary (e.g. from follow-up prompts etc.)
     - <what changed or was requested>
   - Result: <accepted | changes requested | blocked>
+
+## Resolved questions
+<!-- Summarize resolved Arch-N.N Q&A exchanges from PLAN.md here. -->
+- YYYY-MM-DD — Arch-N.N: <short title>
+  - Answer: <1–2 line summary of the response>
+  - Architecture impact: <what changed, stabilized, or unblocked>
 
 ## Resolved issues
 
@@ -25,7 +31,7 @@
 ## Architectural decisions
 <!-- Keep only decisions worth preserving across revisions. -->
 - YYYY-MM-DD: <decision>
-  - Architectural elements IDs (if relevant): []
+  - Architectural element IDs (if relevant): []
   - Rationale: <1–2 lines>
   - Impact: <what parts of the architecture this affects>
 

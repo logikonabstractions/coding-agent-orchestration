@@ -2,7 +2,7 @@
 
 ## State management rules
 - The "Current Focus" can ONLY be updated once the previous checkpoint's STATUS is marked "DONE"
-- A status can be set to DONE **only** in 2 cases: once all acceptance points have been met, OR clear explicite permission from a human has been granted to consider the checkpoint done. 
+- A status can be set to DONE **only** in 2 cases: once all acceptance points have been met, OR clear explicit permission from a human has been granted to consider the checkpoint done. 
 
 ## Current focus
 
@@ -21,7 +21,7 @@
 
 ## Work log (current session)
 <!-- Append-only bullets for what changed and why. Prefer file/line references. -->
-- 2026-03-05: Updated `README.md` and `VIBE.md` to point to canonical meta templates instead of re-embedding template definitions, reducing doc duplication.
+- 2026-03-05: Updated `README.md` and `.vibe/AGENTS_VIBE.md` to point to canonical meta templates instead of re-embedding template definitions, reducing doc duplication.
 
 ## Evidence
 <!-- Paste command outputs, links to commits/PRs, screenshots, etc. -->

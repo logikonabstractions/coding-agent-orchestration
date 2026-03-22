@@ -18,9 +18,9 @@ Found under `/meta_templates/.component`
 
 | File | Role |
 |------|------|
-| `components_description_tplt.md` | Output template and deliverable for the component design |
-| `state_tplt.md` | Blocking issues requiring immediate attention |
-| `history_tplt.md` | Resolved questions and completed component reviews |
+| `/meta_templates/.component/components_description_tplt.md` | Output template and deliverable for the component design |
+| `/meta_templates/.component/state_tplt.md` | Blocking issues requiring immediate attention |
+| `/meta_templates/.component/history_tplt.md` | Resolved questions and completed component reviews |
 
 ## Scope
 

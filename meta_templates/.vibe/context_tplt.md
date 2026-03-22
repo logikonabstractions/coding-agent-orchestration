@@ -18,5 +18,5 @@
 
 ## Agent Notes
 
-- Any note the agent wish to pass forward to futur agents working on this
+- Any note the agent wishes to pass forward to future agents working on this
 

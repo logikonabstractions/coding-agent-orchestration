@@ -9,7 +9,7 @@
 ## Completed component drafts
 <!-- Append entries as component drafts are completed, updated, or approved. -->
 - YYYY-MM-DD — Parent <10 | 20 | 30 | ...> — <parent name>
-  - Draft file: `.component/COMPONENTS_DESCRIPTION.md`
+  - Draft file: `.component/COMPONENTS_DESCRIPTIONS.md`
   - Summary:
     - <major component-design outcome>
     - <major component-design outcome>
