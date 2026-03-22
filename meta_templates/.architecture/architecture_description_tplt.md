@@ -1,29 +1,4 @@
-# ARCHITECTURE DESCRIPTION
-
-The response must provide one or more architectural elements, adhering to this format.
-
-
-# PROBLEM STATEMENT
-
-## Objective
-
-- System:
-  - <what system is being designed>
-- Users / actors:
-  - <who it serves>
-- Primary outcome:
-  - <what it must enable>
-
-## Scope boundaries
-
-- In scope:
-  - <items>
-- Out of scope:
-  - <items>
-
-## Assumptions
-
-- <assumptions>
+**Template file, copy but do not edit**
 
 ## Architectural elements
 

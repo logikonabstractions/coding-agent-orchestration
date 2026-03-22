@@ -1,10 +1,4 @@
-# HISTORY
-
-## Rules
-
-- This file is non-authoritative.
-- Use it for architecture drafts, resolved issues, major review outcomes, and durable architectural decisions.
-- Prefer pointers to files, commits, or review notes instead of copying large blocks.
+**Template file, copy but do not edit**
 
 ## Completed architecture drafts
 <!-- Append entries as architecture drafts are completed, updated, or approved. -->

@@ -1,10 +1,5 @@
-# PLAN
+**Template file, copy but do not edit**
 
-## How to use this file
-
-- This is the **checkpoint backlog**.
-- Each checkpoint must have: Objective, Deliverables, Acceptance, Demo commands, Evidence.
-- Keep checkpoints small enough to complete in one focused iteration.
 
 ## Stage <COMPONENT ID>.<STAGE> — <stage name>
 

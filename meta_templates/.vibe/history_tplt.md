@@ -1,10 +1,4 @@
-# HISTORY
-
-## Rules
-
-- This file is **non-authoritative**.
-- Use it for rollups, resolved issues, and consolidation notes.
-- Prefer links/identifiers rather than copying large blocks.
+**Template file, copy but do not edit**
 
 ## Completed checkpoints
 <!-- Append entries as checkpoints complete. -->
