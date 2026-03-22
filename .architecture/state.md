@@ -7,7 +7,7 @@ This file tracks large, "hot topics" that are ongoing. It may not be active all 
 
 - The current target system should remain stable during a draft unless a human changes the problem statement or scope.
 - The status can be set to `DONE` only when the human reviewer has explicitly approved the result
-- Keep this file focused on current execution state. Put rollups and resolved items in `HISTORY.md`.
+- Keep this file focused on current execution state. Put rollups and resolved items in `history.md`.
 
 ## Current focus
 
@@ -15,7 +15,7 @@ This file tracks large, "hot topics" that are ongoing. It may not be active all 
 - Status: NOT_STARTED  <!-- one of: NOT_STARTED | IN_PROGRESS | IN_REVIEW | DONE | FREEZE -->
 
 ## Objective (current draft)
-<!-- 1 sentence. Keep aligned with `.architecture/ARCHITECTURE_DESCRIPTION.md`. -->
+<!-- 1 sentence. Keep aligned with `.architecture/architecture_description.md`. -->
 
 ## Active assumptions / constraints
 <!-- Keep only the assumptions or constraints that materially affect the current architecture draft. -->
@@ -39,7 +39,7 @@ This file tracks large, "hot topics" that are ongoing. It may not be active all 
 - <decision>
 
 ## Active issues
-<!-- Keep only active issues here. Move resolved items to HISTORY.md. -->
+<!-- Keep only active issues here. Move resolved items to history.md. -->
 - [ ] Arch.0.1: <short title>
   - Impact: QUESTION <!-- QUESTION | MINOR | MAJOR | BLOCKER -->
   - Status: NOT_STARTED <!-- one of: NOT_STARTED | IN_PROGRESS | IN_REVIEW | DONE -->
