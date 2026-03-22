@@ -1,6 +1,6 @@
 **Template file, copy but do not edit**
 
-### 10.1 — <Component name>
+### <ARCHITECTURAL_ELEMENT_ID>.<COMPO_ID> — <Component name>
 
 - Category:
   - <Frontend system / API service / worker / database / queue / adapter / storage / external integration / observability / other>

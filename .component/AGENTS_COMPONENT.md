@@ -9,7 +9,7 @@ Translate **one architectural element** into a **component-level design**.
 2. This file
 3. `.component/COMPONENTS_DESCRIPTIONS.md`
 4. `.component/STATE.md`
-5. `.component/DISCUSSIOn.md`
+5. `.component/DISCUSSION.md`
 6. `.component/HISTORY.md`
 7. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference)
 
@@ -25,7 +25,11 @@ Found under `/meta_templates/.component`
 
 ## Scope
 
-This mode receives **exactly one architectural element** (identified by its top-level number: 10, 20, 30...) and breaks it down into the concrete components required to implement it.
+This mode receives **exactly one architectural element** and breaks it down into the concrete components required to implement it.
+
+## Core output
+
+The deliverable is a complete list of components, conform to the format in `COMPONENTS_DESCRIPTIONS.md`
 
 ## Input requirements
 
@@ -49,7 +53,7 @@ For example, a component could be: "Authentication mechanism", with chosen techn
 
 ## Numbering rules
 
-Components are numbered as sub-elements of their parent architectural element:
+Components are numbered as sub-elements of their parent architectural element, appending a component_id to each (.1, 2., .3, ...)
 
 - Architectural element 10 → components 10.1, 10.2, ..., 10.14...
 - Architectural element 20 → components 20.1, 20.2, 20.3 ...

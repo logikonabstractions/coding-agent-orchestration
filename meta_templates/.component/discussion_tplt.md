@@ -1,20 +1,5 @@
-# DISCUSSION
+**Template file, copy but do not edit**
 
-## How to use this file
-
-- This is the **component discussions**.
-- Use it to track questions about specific components that require clarification, comparison, investigation, or explicit decision.
-- Keep one item per question or decision.
-- When a question is resolved, keep the item here for traceability, mark it `RESOLVED`, and summarize the outcome in `HISTORY.md`.
-- Any Comp-X.Y with a status `RESOVLED` should not be updated later. If the issue needs to be revisited, favor opening a new Comp-X.Y and reference the previous discussion.
-
-## Question resolution
-
-When a question is resolved:
-  - Add a relevant entry to `HISTORY.md`
-  - Update this file's status to `RESOLVED` along with any field (notes, etc.)
-
-## Active component issues
 
 ### Comp-0.0 — <short title>
 
