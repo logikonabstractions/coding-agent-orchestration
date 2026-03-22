@@ -61,10 +61,6 @@ Use top-level element numbering in increments of 10 (10, 20, 30...)
 
 Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for blocking architectural choices.
 
-Use `.architecture/STATE.md` to track the currently active architecture draft, current focus, active blockers, and work log.
-
-Use `.architecture/HISTORY.md` to archive resolved questions, completed review rounds, and durable architecture decisions.
-
 ## Question lifecycle
 
 1. Create an `Arch-N.N` item in `.architecture/PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
