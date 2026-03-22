@@ -60,7 +60,7 @@ Use top-level element numbering in increments of 10 (10, 20, 30...)
 
 ## Architecture planning rule
 
-Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for blocking architectural choices.
+Use `.architecture/DISCUSSION.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for blocking architectural choices.
 
 ## FREEZE step
 
@@ -73,7 +73,7 @@ When the human reviewer confirms the architecture is ready to freeze:
 1. **Update `.architecture/STATE.md`**:
    - Set `Status` to `FREEZE`
    - Remove all HTML comments and placeholder text (clean up the template artifacts)
-   - Add a `## Key Architecture Decisions` section summarizing the major orientations chosen during the architecture review (cloud provider, core patterns, technology families, key constraints, etc.) as concise bullet points. This section is the **primary reference** for downstream agents working on components
+   - Add a `## Key Architecture Decisions` section summarizing the major orientations chosen during the architecture review (providers, core patterns, technology families, key constraints, priorities.) as concise bullet points. This section is the **primary reference** for downstream agents working on components
    - Clear the `Active issues` section (move any remaining items to `HISTORY.md`)
    - Clear the `Workflow state` checkboxes
 
