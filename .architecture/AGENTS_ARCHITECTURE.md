@@ -17,9 +17,9 @@ Found under `/meta_templates/.architecture`
 
 | File | Role |
 |------|------|
-| `architecture_description_tplt.md` | Format for each architectural element description |
-| `state_tplt.md` | Current draft, focus, active blockers, work log |
-| `history_tplt.md` | Resolved questions, completed review rounds, durable decisions |
+| `/meta_templates/.architecture/architecture_description_tplt.md` | Format for each architectural element description |
+| `/meta_templates/.architecture/state_tplt.md` | Current draft, focus, active blockers, work log |
+| `/meta_templates/.architecture/history_tplt.md` | Resolved questions, completed review rounds, durable decisions |
 
 ## Scope
 
@@ -67,6 +67,6 @@ Use `.architecture/HISTORY.md` to archive resolved questions, completed review r
 
 ## Question lifecycle
 
-1. Create an `Arch-N.N` item in `PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
-2. When a response is received, append a `#### Response — Arch-N.N` block under the item (see response template in `PLAN.md`).
-3. Once the question is fully resolved, mark the item `RESOLVED` in `PLAN.md` and summarize the exchange into `HISTORY.md` under **Resolved questions**. Keep it concise — `PLAN.md` retains the full record.
+1. Create an `Arch-N.N` item in `.architecture/PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
+2. When a response is received, append a `#### Response — Arch-N.N` block under the item (see response template in `.architecture/PLAN.md`).
+3. Once the question is fully resolved, mark the item `RESOLVED` in `.architecture/PLAN.md` and summarize the exchange into `.architecture/HISTORY.md` under **Resolved questions**. Keep it concise — `PLAN.md` retains the full record.

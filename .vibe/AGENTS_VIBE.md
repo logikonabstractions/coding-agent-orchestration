@@ -51,10 +51,10 @@ Found under `/meta_templates/.vibe`
 
 | File | Role |
 |------|------|
-| `state_tplt.md` | Current checkpoint, status, work log, active issues, decisions |
-| `plan_tplt.md` | Ordered list of checkpoints with objectives and acceptance criteria |
-| `history_tplt.md` | Completed checkpoints and decisions |
-| `context_tplt.md` | Shared context: architecture notes, key decisions, gotchas, hot files |
+| `/meta_templates/.vibe/state_tplt.md` | Current checkpoint, status, work log, active issues, decisions |
+| `/meta_templates/.vibe/plan_tplt.md` | Ordered list of checkpoints with objectives and acceptance criteria |
+| `/meta_templates/.vibe/history_tplt.md` | Completed checkpoints and decisions |
+| `/meta_templates/.vibe/context_tplt.md` | Shared context: architecture notes, key decisions, gotchas, hot files |
 
 ## Scope and cadence
 - A **stage** groups a few related checkpoints.
@@ -62,10 +62,11 @@ Found under `/meta_templates/.vibe`
 - Limit changes to what is necessary to meet acceptance criteria.
 
 ## Metafile updates
-- When a checkpoint moves to DONE, update `STATE.md` to reflect the new state.
-- NEVER remove checkpoints from `PLAN.md` unless explicitly asked to.
+- When a checkpoint moves to DONE, update `.vibe/STATE.md` to reflect the new state.
+- NEVER remove checkpoints from `.vibe/PLAN.md` unless explicitly asked to.
 - NEVER re-number checkpoints unless explicitly asked to.
 
 ## Version control policy
+- Branch naming for agent-created branches: `codex/{feature}`.
 - Commit coherent changes: a commit should be a single set of related and consistent changes towards a given checkpoint.
 - Commit message prefix: `<checkpoint-id>: <imperative summary>`

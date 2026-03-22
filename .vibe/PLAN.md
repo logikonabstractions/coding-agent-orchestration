@@ -13,9 +13,9 @@
 - Objective:
   - <1 sentence>
 - Notes:
- - <notable technical elements for this checkpoint>
+  - <notable technical elements for this checkpoint>
 - Deliverables:
-  - <files and modules to be created, deleted, or update>
+  - <files and modules to be created, deleted, or updated>
 - Acceptance:
   - [ ] <verifiable condition 1>
 - Demo commands:
