@@ -3,6 +3,14 @@
 This document is human-oriented and not to be considered for agent workflows.
 
 ## TODO & CURRENT STATE
+=======
+## ROADMAP - VIBECODING
+* Add instructions so PR title ALWAYS contain: <stage> - <checkpoint> - <checkpoint title> from plan.md
+* Move stage MOST RECENT (highest #) to top of file, decreasing. Checkpoint within a stage can remain increasing numbers (so 5.0, 5.1, 5.2, 4.0, 4.1, 3.0, ...)
+* Add CLEAR instruction that is something is ask about a checkpoint X.Y that doesn't exist, the agent MUST stop & ask for claricafion and not do anything.
+
+## TODO
+>>>>>>> basic
 * update this readme to explain new workflows
 * working on .components: review works by claude, chatgpt. see the "state_of_work.md" file in .component
 
