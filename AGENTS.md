@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use this repository as a **lightweight, human-in-the-loop planning system**. It supports 3 modes: **architecture**, **component** and **vibe**. Each mode can be used in isolation. A logical flow can also be used, definining **architectural elements**, from each of which we can derive **components**. From each component, **vibe-draft** can be used to write Stages & Checkpoints, which can then be codeing using **vibe-implement**. Or, one can directly write Stages & Checkpoints to **vibe-implement** them directly.
+Use this repository as a **lightweight, human-in-the-loop planning system**. It supports 3 modes: **architecture**, **component** and **vibe** (which has two sub-modes: **vibe-draft** and **vibe-implement**). Each mode can be used in isolation. A logical flow can also be used, defining **architectural elements**, from each of which we can derive **components**. From each component, **vibe-draft** can be used to write Stages & Checkpoints, which can then be coded using **vibe-implement**. Or, one can directly write Stages & Checkpoints to **vibe-implement** them.
 
 This file is the overriding, baseline workflow contract. Each mode-specific `AGENTS_<mode>.md` file extends this contract with mode-specific rules.
 
@@ -30,6 +30,14 @@ Do **not** remove or rewrite earlier entries — HISTORY.md is append-only.
 ## State management
 
 For all modes, `.<mode>/STATE.md` tracks current focus, active blockers, and work in progress. Update it whenever focus shifts or a blocker is added/resolved.
+
+## PLAN.md conventions
+
+Each mode uses a `PLAN.md` file, but its role differs by mode:
+- **architecture** and **component**: `PLAN.md` is a **question & investigation backlog** — not an implementation plan.
+- **vibe**: `PLAN.md` is an **ordered checkpoint plan** — the implementation backlog.
+
+See each mode's `AGENTS_<mode>.md` for the specific PLAN.md semantics and templates.
 
 ## Meta-templates
 

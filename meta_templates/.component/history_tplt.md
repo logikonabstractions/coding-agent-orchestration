@@ -12,7 +12,7 @@
 ## Review history
 <!-- Use this for component revision rounds -->
 - YYYY-MM-DD — Review round <n>
-  - Parent architectural component: <10 | 20 | 30 | ...>
+  - Parent architectural element: <10 | 20 | 30 | ...>
   - Component IDs (if relevant): []
   - Feedback summary:
     - <what changed or was requested>
@@ -21,14 +21,14 @@
 ## Resolved issues
 
 - YYYY-MM-DD — ISSUE-001: <title>
-  - Parent architectural component: <10 | 20 | 30 | ...>
+  - Parent architectural element: <10 | 20 | 30 | ...>
   - Resolution: <1-2 lines>
   - Notes: <optional>
 
 ## Component-design decisions
 <!-- Keep only decisions worth preserving across revisions. -->
 - YYYY-MM-DD: <decision>
-  - Parent architectural component: <10 | 20 | 30 | ...>
+  - Parent architectural element: <10 | 20 | 30 | ...>
   - Component IDs (if relevant): []
   - Rationale: <1-2 lines>
   - Impact: <what parts of the component design this affects>
@@ -36,6 +36,6 @@
 ## Superseded choices / changes
 <!-- Optional. Use when previous choices were later invalidated. -->
 - YYYY-MM-DD: <old choice>
-  - Parent architectural component: <10 | 20 | 30 | ...>
+  - Parent architectural element: <10 | 20 | 30 | ...>
   - Replaced by: <new direction>
   - Reason: <why it changed>

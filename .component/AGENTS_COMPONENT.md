@@ -8,9 +8,10 @@ Translate **one architectural element** into a **component-level design**.
 1. As specified by `AGENTS.md`
 2. This file
 3. `.component/COMPONENTS_DESCRIPTIONS.md`
-4. `.component/STATE.md`
-5. `.component/HISTORY.md`
-6. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference)
+4. `.component/PLAN.md`
+5. `.component/STATE.md`
+6. `.component/HISTORY.md`
+7. `.architecture/ARCHITECTURE_DESCRIPTION.md` (read-only reference)
 
 ## Meta-templates
 
@@ -19,7 +20,8 @@ Found under `/meta_templates/.component`
 | File | Role |
 |------|------|
 | `/meta_templates/.component/components_description_tplt.md` | Output template and deliverable for the component design |
-| `/meta_templates/.component/state_tplt.md` | Blocking issues requiring immediate attention |
+| `/meta_templates/.component/PLAN.md` | Component-design questions, investigations, and decisions |
+| `/meta_templates/.component/state_tplt.md` | Current focus, active blockers, work log |
 | `/meta_templates/.component/history_tplt.md` | Resolved questions and completed component reviews |
 
 ## Scope
@@ -55,3 +57,12 @@ Components are numbered as sub-elements of their parent architectural element:
 
 There is no fixed upper bound on component count — use as many as relevant.
 
+## Component planning rule
+
+Use `.component/PLAN.md` to track component-design questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for blocking component-design choices.
+
+## Question lifecycle
+
+1. Create a `Comp-N.N` item in `.component/PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
+2. When a response is received, append a `#### Response — Comp-N.N` block under the item (see response template in `.component/PLAN.md`).
+3. Once the question is fully resolved, mark the item `RESOLVED` in `.component/PLAN.md` and summarize the exchange into `.component/HISTORY.md` under **Resolved issues**. Keep it concise — `PLAN.md` retains the full record.
