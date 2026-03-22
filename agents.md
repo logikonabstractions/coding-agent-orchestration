@@ -4,7 +4,7 @@
 
 Use this repository as a **lightweight, human-in-the-loop planning system**. It supports 3 modes: **architecture**, **component** and **vibe** (which has two sub-modes: **vibe-draft** and **vibe-implement**). Each mode can be used in isolation. A logical flow can also be used, defining **architectural elements**, from each of which we can derive **components**. From each component, **vibe-draft** can be used to write Stages & Checkpoints, which can then be coded using **vibe-implement**. Or, one can directly write Stages & Checkpoints to **vibe-implement** them.
 
-This file is the overriding, baseline workflow contract. Each mode-specific `agents_<mode>.md` file extends this contract with mode-specific rules.
+This file is the overriding, baseline workflow contract. Each mode-specific `.<mode>/agents_<mode>.md` file extends this contract with mode-specific rules.
 
 ## Generic instructions
 	- The mode (**architecture**, **component** or **vibe**) must be clearly specified. Either earlier in the conversation (e.g. it is clear from conversation history which mode is expected) or explicitly in the prompt. If you are unsure, you MUST ask to confirm.
