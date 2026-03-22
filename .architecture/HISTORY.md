@@ -6,31 +6,14 @@
 - Use it for architecture drafts, resolved issues, major review outcomes, and durable architectural decisions.
 - Prefer pointers to files, commits, or review notes instead of copying large blocks.
 
-## Completed architecture drafts
-<!-- Append entries as architecture drafts are completed, updated, or approved. -->
-- YYYY-MM-DD — <system or project name>
-  - Draft file: `.architecture/ARCHITECTURE_DESCRIPTION.md`
-  - Summary:
-    - <major architectural outcome>
-    - <major architectural outcome>
+## Entry Templates
 
-## Review history
-<!-- Use this for architecture revision rounds -->
-- YYYY-MM-DD — Review round <n>
-  - Architectural element IDs (if relevant): []
-  - Feedback summary (e.g. from follow-up prompts etc.)
-    - <what changed or was requested>
-  - Result: <accepted | changes requested | blocked>
+Use the most relevant template below when adding an entry. All entries must conform to one such template.
 
-## Resolved questions
-<!-- Summarize resolved Arch-N.N Q&A exchanges from PLAN.md here. -->
-- YYYY-MM-DD — Arch-N.N: <short title>
-  - Answer: <1–2 line summary of the response>
-  - Architecture impact: <what changed, stabilized, or unblocked>
 
 ## Resolved issues
-
-- YYYY-MM-DD — ISSUE-001: <title>
+- <Arch-N.N>: <short title>
+  - YYYY-MM-DD  
   - Resolution: <1–2 lines>
   - Notes: <optional>
 
@@ -38,11 +21,13 @@
 <!-- Keep only decisions worth preserving across revisions. -->
 - YYYY-MM-DD: <decision>
   - Architectural element IDs (if relevant): []
+  - Related Discussions if any: <Arch-N.N>
   - Rationale: <1–2 lines>
   - Impact: <what parts of the architecture this affects>
 
 ## Superseded assumptions / changes
 <!-- Optional. Use when previous assumptions were later invalidated. -->
 - YYYY-MM-DD: <old assumption or prior direction>
+  - Related Discussions if any: <Arch-N.N>
   - Replaced by: <new direction>
   - Reason: <why it changed>

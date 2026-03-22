@@ -9,7 +9,8 @@ Translate a product or problem statement into an **architectural design**.
 2. This file
 3. `.architecture/ARCHITECTURE_DESCRIPTION.md`
 4. `.architecture/STATE.md`
-5. `.architecture/HISTORY.md`
+5. `.architecture/DISCUSSION.md`
+6. `.architecture/HISTORY.md`
 
 ## Meta-templates
 
@@ -61,12 +62,6 @@ Use top-level element numbering in increments of 10 (10, 20, 30...)
 
 Use `.architecture/PLAN.md` to track architecture questions that require discussion, investigation, clarification, or explicit decision. Do not over-use this track for minor decisions. Keep it for blocking architectural choices.
 
-Use `.architecture/STATE.md` to track the currently active architecture draft, current focus, active blockers, and work log.
-
-Use `.architecture/HISTORY.md` to archive resolved questions, completed review rounds, and durable architecture decisions.
-
 ## Question lifecycle
 
-1. Create an `Arch-N.N` item in `.architecture/PLAN.md` with status `OPEN` or `DECISION_REQUIRED`.
-2. When a response is received, append a `#### Response — Arch-N.N` block under the item (see response template in `.architecture/PLAN.md`).
-3. Once the question is fully resolved, mark the item `RESOLVED` in `.architecture/PLAN.md` and summarize the exchange into `.architecture/HISTORY.md` under **Resolved questions**. Keep it concise — `PLAN.md` retains the full record.
+1. Create an `Arch-N.N` item in `.architecture/DISCUSSION.md`. Follow instructions provided there.

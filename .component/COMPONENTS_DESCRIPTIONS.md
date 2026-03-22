@@ -23,7 +23,7 @@ The response must provide a component-level design for **one parent architectura
 
 Repeat & fill this template as needed. Follow the numbering convention.
 
-### <ARCHITECTURAL_ELEMENT_ID.X> — <Component name>
+### <ARCHITECTURAL_ELEMENT_ID><COMPO_ID> — <Component name>
 
 - Category:
   - <Frontend system / API service / worker / database / queue / adapter / storage / external integration / observability / other>
